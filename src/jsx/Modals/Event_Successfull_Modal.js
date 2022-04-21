@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import { Modal } from 'react-bootstrap'
+import React, { Fragment } from 'react';
+import { Modal } from 'react-bootstrap';
 
 const Event_Successfull_Modal = (props) => {
     return (

@@ -130,35 +130,7 @@ const Edit_Post = () => {
             </div>
         </div> --> */}
 
-                {/* <!-- <div className="modal fade" id="UploadCoverPhotoModal" tabindex="-1" aria-labelledby="UploadCoverPhotoModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body sl-choose-file-modal-body">
-                        <h5 className="modal-title" id="UploadCoverPhotoModalLabel">Upload cover photo</h5>
-                        <div className="sl-choose-file-content sl-selected-file-content">
-                            <div className="sl-selected-file-content__inner">
-                                <div className="sl-selected-file-preview">
-                                    <img src="images/cover-img.png" alt="cover-img" className="img-fluid sl-selected-file-view" />
-                                    <span className="sl-selected-file-name">myphoto.png</span>
-                                    <span className="sl-remove-icon">
-                                        <img src="images/close-icon.png" alt="close-icon" className="img-fluid" />
-                                    </span>
-                                </div>
-                                <div className="sl-select-other-file-content">
-                                    <span>Select other photo</span>
-                                    <input type="file" className="form-control" id="slSelectOtherFile">
-                                </div>
-                            </div>
-                        </div>
-                        <button className="btn btn-outline-success">Set Random Photo</button>
-                        <button className="btn btn-success">Upload</button>
-                    </div>
-                </div>
-            </div>
-        </div> --> */}
+
 
                 {/* <div className="modal fade" id="UploadCoverPhotoModal" tabindex="-1" aria-labelledby="UploadCoverPhotoModalLabel" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered sl-uploded-img-modal">
@@ -209,21 +181,7 @@ const Edit_Post = () => {
                     </div>
                 </div> */}
 
-                {/* <div className="modal fade sl-light-modal" id="postCreateSuccessModal" tabindex="-1" aria-labelledby="postCreateSuccessModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div className="modal-body">
-                                <div className="sl-modal-logo text-center">
-                                    <img src="images/logo.png" alt="logo" className="img-fluid" />
-                                </div>
-                                <h5 className="modal-title" id="postCreateSuccessModalLabel">Your post has been successfully created.</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+
             </div>
             <Footer />
         </Fragment>

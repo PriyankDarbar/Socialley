@@ -5,7 +5,7 @@ import Header1 from '../layouts/Header1';
 
 const Health_Wellness_Preferences = () => {
 
-    const [errors, setErrors] = useState();
+    const [errors, setErrors] = useState({});
     const [category, setCateory] = useState([]);
     const [mood, setMood] = useState([]);
     const [content, setContent] = useState([]);
@@ -16,9 +16,20 @@ const Health_Wellness_Preferences = () => {
         let error = {};
         if (category.length === 0) {
             isValid = false;
-            error['category_error'] = "Please select atleast one category"
+            error['category_err'] = "Please select atleast one category"
         }
-
+        if (mood.length === 0) {
+            isValid = false;
+            error['mood_err'] = "Please select atleast one mood"
+        }
+        if (content.length === 0) {
+            isValid = false;
+            error['content_err'] = "Please select atleast one content"
+        }
+        if (notification.length === 0) {
+            isValid = false;
+            error['notification_err'] = "Please select atleast one notification"
+        }
         setErrors(error);
         return isValid;
     }
@@ -75,9 +86,13 @@ const Health_Wellness_Preferences = () => {
         }
     }
 
-    let nav=useNavigate();
-    const HandleConfirm=()=>{
-        nav('/review-page');
+    let nav = useNavigate();
+    const HandleConfirm = () => {
+        if (validate()) {
+            let selected = [category, mood, content, notification];
+            localStorage.setItem("health-preferences", JSON.stringify(selected));
+            nav('/review-page');
+        }
     }
 
     return (
@@ -126,7 +141,7 @@ const Health_Wellness_Preferences = () => {
                                                                 <label className="form-check-label" for="CategoriCheckbox2">Social Well-being</label>
                                                             </div>
                                                         </div>
-                                                        <div className='errors'>{errors.category_error}</div>
+                                                        <div className='errors'>{errors.category_err}</div>
                                                     </div>
                                                     <div className="sl-preferences-form-content">
                                                         <div className="sl-preferences-form-header">
@@ -157,6 +172,7 @@ const Health_Wellness_Preferences = () => {
                                                                 <label className="form-check-label" for="moodCheckbox5">Inner Calm</label>
                                                             </div>
                                                         </div>
+                                                        <div className='errors'>{errors.mood_err}</div>
                                                     </div>
                                                     <div className="sl-preferences-form-content">
                                                         <div className="sl-preferences-form-header">
@@ -187,6 +203,7 @@ const Health_Wellness_Preferences = () => {
                                                                 <label className="form-check-label" for="contentCheckbox5">Training Programs</label>
                                                             </div>
                                                         </div>
+                                                        <div className='errors'>{errors.content_err}</div>
                                                     </div>
                                                     <div className="sl-preferences-form-content">
                                                         <div className="sl-preferences-form-header">
@@ -209,6 +226,7 @@ const Health_Wellness_Preferences = () => {
                                                                 <label className="form-check-label" for="notificationCheckbox3">Monthly</label>
                                                             </div>
                                                         </div>
+                                                        <div className='errors'>{errors.notification_err}</div>
                                                     </div>
                                                 </div>
                                                 <div className="text-end">

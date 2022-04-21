@@ -11,7 +11,7 @@ const Email_Change_Password = () => {
               <img src="images/logo.png" alt="logo" class="img-fluid" />
             </div>
             <h5 style={{ fontWeight: "bold", fontSize: "17px", lineHeight: "20px", textAlign: "center", textTransform: "uppercase", color: "#000000", margin: "0 auto 30px" }}>You have requested a password change, please follow the link to set a new password</h5>
-            <Link to={'/set-new-password'} style={{ fontWeight: "bold", fontSize: "17px", lineHeight: "20px", textAlign: "center", color: "#FFFFFF", background: "#8BD8BD", borderRadius: "9px", padding: "10px 25px", textDecoration: "none", display: "block", marginBottom: "35px" }}>Login</Link>
+            <Link to={'/set-new-password'} style={{ fontWeight: "bold", fontSize: "17px", lineHeight: "20px", textAlign: "center", color: "#FFFFFF", background: "#8BD8BD", borderRadius: "9px", padding: "10px 25px", textDecoration: "none", display: "block", marginBottom: "35px" }}>Set New Password</Link>
           </div>
         </div>
       </div>
