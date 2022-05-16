@@ -31,6 +31,9 @@ import Create_Event_Inside_Community from './Pages/Create_Event_Inside_Community
 import Create_Post_Inside_Community from './Pages/Create_Post_Inside_Community';
 import YogaEvents from './Pages/YogaEvents';
 import Edit_User_Profile from './Pages/Edit_User_Profile';
+import Bussiness from './Pages/Bussiness';
+import Bussiness_Signup from './Pages/Bussiness_Signup';
+import Community_Events from './Pages/Community_Events';
 
 const Markup = () => {
   return (
@@ -39,11 +42,14 @@ const Markup = () => {
       <Route path='/home' element={<Home />} />
       <Route path='/acknowledgement' element={<Acknowledgement />} />
       <Route path="/acknowledgement-payment" element={<Acknowledgement_Payment />} />
+      <Route path='/bussiness' element={<Bussiness />} />
+      <Route path='/bussiness-signup' element={<Bussiness_Signup />} />
       <Route path="/choose-membership1" element={<Choose_Membership1 />} />
       <Route path='/confirm-purchase' element={<Confirm_Purchase />} />
       <Route path='/choose-membership2' element={<Choose_Membership2 />} />
       <Route path='/community-admin-open' element={<Community_Admin_Open />} />
       <Route path='/community-details' element={<Community_Details />} />
+      <Route path='/community-events' element={<Community_Events />} />
       <Route path='/yoga' element={<Yoga />} />
       <Route path='/yoga-events' element={<YogaEvents />} />
       <Route path='/community-empty' element={<Community_Empty />} />

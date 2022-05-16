@@ -1,53 +1,8 @@
-import React, { Fragment, useState } from 'react';
-import Login from '../Pages/Login';
-import Register from '../Pages/Register';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from 'react'
 
-const Header = () => {
-
-    const [loginModal, setLoginModal] = useState(false);
-    const [registerModal, setRegisterModal] = useState(false);
-
-
-    const handleLogin = () => {
-        setLoginModal(true);
-    }
-
-    const handleLoginClose = () => {
-        setLoginModal(false);
-    }
-
-
-    const handleRegister = () => {
-        setRegisterModal(true);
-    }
-
-    const handleRegisterClose = () => {
-        setRegisterModal(false);
-    }
-
-    const handleReRegister = () => {
-        setLoginModal(false);
-        setRegisterModal(true);
-    }
-
-    const handleReLogin = () => {
-        setRegisterModal(false);
-        setLoginModal(true);
-    }
+const Home_Header = () => {
     return (
         <Fragment>
-            <Login
-                activeModal={loginModal}
-                setActiveModal={handleLoginClose}
-                reRegister={handleReRegister}
-            />
-
-            <Register
-                activeModal={registerModal}
-                setActiveModal={handleRegisterClose}
-                reLogin={handleReLogin}
-            />
             <div className='sl-site'>
                 <header class="sl-site-header">
                     <nav class="navbar navbar-expand-lg ">
@@ -55,13 +10,13 @@ const Header = () => {
                             <a class="navbar-brand" href="index.html">
                                 <img src="images/logo.png" alt="Logo" class="img-fluid" />
                             </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icons"></span>
                                 <span class="navbar-toggler-icons"></span>
                                 <span class="navbar-toggler-icons"></span>
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
+                            <div class="navbar-collapse collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto me-0">
                                     <li class="nav-item">
                                         <a class="nav-link " aria-current="page" href="#">Health &amp; Wellness</a>
                                         <ul class="sl-site-submenu-list">
@@ -174,10 +129,7 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Fitness &amp; Nutrition</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Travel &amp; Sightseeing</a>
+                                        <a class="nav-link" href="#">Buisness Account</a>
                                     </li>
                                 </ul>
                             </div>
@@ -193,4 +145,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Home_Header
